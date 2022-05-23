@@ -1,0 +1,15 @@
+First I ran ubuntu with a command:
+
+docker run -d -it ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+then I entered to container with a command:
+
+docker exec -it angry_keller bash
+
+insdie container I installed curl with a command:
+
+apt update && apt install curl -y
+
+I opened 2nd terminal and attached a container:
+
+docker attach angry_keller
